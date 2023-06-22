@@ -1,0 +1,27 @@
+version: '3.8'
+
+x-env: &env
+  MONGODB_URI: mongodb://mongo:27017/app
+
+services:
+  web:
+    build: 
+      context: .
+      args:
+        <<: *env
+    restart: always
+    ports:
+      - ${PORT:-3000}:3000
+    depends_on:
+      - mongo
+    environment: 
+      <<: *env
+
+  mongo:
+    image: mongo
+    restart: always
+    volumes:
+      - db:/data/db
+
+volumes:
+  db:

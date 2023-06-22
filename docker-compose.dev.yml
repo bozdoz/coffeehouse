@@ -1,0 +1,17 @@
+#
+# Use by creating a .env file with:
+# COMPOSE_FILE=docker-compose.yml:docker-compose.dev.yml
+#
+
+version: "3.8"
+
+services:
+  web:
+    command: npm run dev
+    volumes:
+      - ./src:/app
+
+  # mongo-express:
+  #   image: mongo-express
+  #   ports:
+  #     - 8081:8081
