@@ -1,0 +1,327 @@
+main {
+  padding-top: 2em;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+.header {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 5px;
+  padding-bottom: 1em;
+  font-size: 1.25em;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  aside {
+    text-shadow: white 2px 2px 2px;
+  }
+}
+
+.year-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/** styles **/
+aside {
+  z-index: 5;
+}
+
+ol {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 0 10px;
+  overflow: hidden;
+  width: 80vw;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+li {
+  list-style-type: none;
+  display: block;
+  text-transform: uppercase;
+  font-weight: 900;
+  position: relative;
+}
+
+li:after {
+  content: "";
+  position: absolute;
+  background: #0087d4;
+  height: 4px;
+  width: 4px;
+  transform: rotatez(45deg);
+  top: 10px;
+  right: -8px;
+  right: calc(var(--diff) * -0.5px - 2px);
+}
+
+li:last-child {
+  &:after {
+    display: none;
+  }
+}
+
+footer {
+  height: 11em;
+  position: relative;
+  overflow: hidden;
+}
+
+.center,
+.diamond,
+.diamond *,
+.circle,
+.circle * {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.diamond {
+  transform: rotate(45deg);
+}
+
+.circle {
+  border-radius: 50%;
+
+  * {
+    border-radius: 50%;
+  }
+}
+
+.left-orange {
+  left: 10%;
+  bottom: 18%;
+}
+
+.right-orange {
+  right: 10%;
+  bottom: 40%;
+}
+
+.pabs {
+  position: absolute;
+}
+
+.s20 {
+  width: 20px;
+  height: 20px;
+}
+
+.s25 {
+  width: 25px;
+  height: 25px;
+}
+
+.s40 {
+  width: 40px;
+  height: 40px;
+}
+
+.s50 {
+  width: 50px;
+  height: 50px;
+}
+
+.s60 {
+  width: 60px;
+  height: 60px;
+}
+
+.s75 {
+  width: 75px;
+  height: 75px;
+}
+
+.s80 {
+  width: 80px;
+  height: 80px;
+}
+
+.s100 {
+  width: 100px;
+  height: 100px;
+}
+
+.left-diamond {
+  left: 25%;
+  top: 0%;
+}
+
+.scale30 {
+  transform: scale(0.3);
+}
+
+.scale50.diamond {
+  transform: scale(0.5) rotate(45deg);
+}
+
+.scale50 {
+  transform: scale(0.5);
+}
+
+.scale75 {
+  transform: scale(0.75);
+}
+
+.scale150.diamond {
+  transform: scale(1.5) rotate(45deg);
+}
+
+.red {
+  background: #ff014a;
+}
+
+.blue {
+  background: #0086d2;
+}
+
+.lightblue {
+  background: #00cef8;
+}
+
+.pink {
+  background: pink;
+}
+
+.orange {
+  background: #fe5500;
+}
+
+.light-orange {
+  background: #fdab00;
+}
+
+.green {
+  background: #4b6d3b;
+}
+
+.dark-green {
+  background: #1a2818;
+}
+
+.left-side {
+  height: 100%;
+  width: 100%;
+  top: 0;
+}
+
+.right-side {
+  transform: rotateY(180deg);
+  height: 100%;
+  width: 100%;
+  top: 0;
+}
+
+.t10 {
+  top: -10%;
+}
+
+.bushes {
+  z-index: 1;
+  bottom: 0;
+  width: 100%;
+  > * {
+    position: absolute;
+    bottom: 0;
+
+    &:nth-child(1) {
+      left: 0;
+    }
+    &:nth-child(2) {
+      left: 6%;
+      z-index: 1;
+    }
+    &:nth-child(3) {
+      left: 14%;
+      z-index: 2;
+    }
+
+    &:nth-child(4) {
+      left: 20%;
+      z-index: 1;
+    }
+
+    &:nth-child(5) {
+      left: 26%;
+      z-index: 4;
+    }
+  }
+}
+
+.blue-bushes {
+  z-index: 1;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  > * {
+    position: absolute;
+    bottom: 0;
+
+    &:nth-child(1) {
+      left: 5%;
+      top: 28%;
+      scale: 60%;
+      z-index: 1;
+    }
+    &:nth-child(2) {
+      left: 10%;
+      top: 25%;
+    }
+    &:nth-child(3) {
+      left: 16%;
+      top: 27%;
+      scale: 75%;
+    }
+  }
+}
+
+.banner {
+  position: relative;
+  height: 3em;
+  padding-top: 8em;
+  box-sizing: content-box;
+  overflow: hidden;
+}
+
+.main-diamond {
+  top: 72%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg) scale(150%) !important;
+}
+
+.green.rect {
+  position: relative;
+  background: #1a2819;
+  z-index: 15;
+  width: 100%;
+  height: 100%;
+}
+
+article {
+  margin: 0 auto;
+  max-width: 800px;
+  width: 100%;
+
+  p {
+    max-width: 600px;
+    width: 95%;
+    margin: 0 auto;
+    font-size: 1.5em;
+  }
+}

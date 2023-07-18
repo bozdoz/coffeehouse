@@ -1,11 +1,11 @@
-version: '3.8'
+version: "3.8"
 
 x-env: &env
   MONGODB_URI: mongodb://mongo:27017/app
 
 services:
   web:
-    build: 
+    build:
       context: .
       args:
         <<: *env
@@ -14,11 +14,12 @@ services:
       - ${PORT:-3000}:3000
     depends_on:
       - mongo
-    environment: 
+    environment:
       <<: *env
 
   mongo:
     image: mongo
+    command: mongod --quiet --logpath /dev/null
     restart: always
     volumes:
       - db:/data/db

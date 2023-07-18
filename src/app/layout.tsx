@@ -1,8 +1,22 @@
 import { type Metadata } from "next";
-import "./globals.css";
-import { Inter } from "next/font/google";
+import "./globals.scss";
+import { Oswald, Rampart_One, Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const oswald = Oswald({
+  weight: "500",
+  subsets: ["latin"],
+  variable: "--font-oswald",
+});
+const rampart = Rampart_One({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-rampart",
+});
+const inter = Inter({
+  weight: "500",
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
   title: "Open Mic Coffeehouse",
@@ -22,7 +36,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${oswald.variable} ${rampart.variable} ${inter.variable}`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,10 +1,15 @@
-import styles from "./page.module.css";
+import "./page.scss";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <h1>Open Mic / Coffeehouse</h1>
-      <h2>Come do something</h2>
+    <main>
+      <Header />
+      <article>
+        <p className="center">Come do something</p>
+      </article>
+      <Footer />
     </main>
   );
 }
