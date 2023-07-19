@@ -29,12 +29,19 @@ main {
   justify-content: center;
   align-items: center;
   gap: 10px;
+
+  z-index: 5;
+
+  aside {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    padding: 3px;
+    font-weight: bolder;
+    font-size: 1.1em;
+  }
 }
 
 /** styles **/
-aside {
-  z-index: 5;
-}
 
 ol {
   margin: 0;
@@ -229,7 +236,9 @@ footer {
 }
 
 .t10 {
-  top: -10%;
+  top: -32%;
+  position: absolute;
+  left: -7%;
 }
 
 .bushes {
@@ -241,24 +250,24 @@ footer {
     bottom: 0;
 
     &:nth-child(1) {
-      left: 0;
+      left: -9%;
     }
     &:nth-child(2) {
-      left: 6%;
+      left: 0%;
       z-index: 1;
     }
     &:nth-child(3) {
-      left: 14%;
+      left: 7%;
       z-index: 2;
     }
 
     &:nth-child(4) {
-      left: 20%;
+      left: 15%;
       z-index: 1;
     }
 
     &:nth-child(5) {
-      left: 26%;
+      left: 23%;
       z-index: 4;
     }
   }
@@ -274,17 +283,17 @@ footer {
     bottom: 0;
 
     &:nth-child(1) {
-      left: 5%;
+      left: -5%;
       top: 28%;
       scale: 60%;
       z-index: 1;
     }
     &:nth-child(2) {
-      left: 10%;
+      left: 0%;
       top: 25%;
     }
     &:nth-child(3) {
-      left: 16%;
+      left: 8%;
       top: 27%;
       scale: 75%;
     }
