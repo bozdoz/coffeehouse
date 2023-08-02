@@ -7,7 +7,13 @@ export default function Home() {
     <main>
       <Header />
       <article>
-        <p className="center">Come do something</p>
+        <p className="center">Bring anything</p>
+        <p className="center">Do anything</p>
+      </article>
+      <article>
+        <h2>FAQ</h2>
+        <h4>Can I perform the dance from Napolean Dynamite?</h4>
+        <p className="center">You sure can!</p>
       </article>
       <Footer />
     </main>

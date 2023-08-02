@@ -22,6 +22,14 @@ main {
   aside {
     text-shadow: white 2px 2px 2px;
   }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-oswald), Arial, Helvetica, sans-serif;
+  }
 }
 
 .year-title {

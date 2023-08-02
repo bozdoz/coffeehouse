@@ -12,10 +12,15 @@ const rampart = Rampart_One({
   subsets: ["latin"],
   variable: "--font-rampart",
 });
-const inter = Inter({
+const para = Inter({
   weight: "500",
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-para",
+});
+const header = Inter({
+  weight: "800",
+  subsets: ["latin"],
+  variable: "--font-header",
 });
 
 export const metadata: Metadata = {
@@ -37,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${oswald.variable} ${rampart.variable} ${inter.variable}`}
+        className={`${oswald.variable} ${rampart.variable} ${para.variable} ${header.variable}`}
       >
         {children}
       </body>
